@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package orroutes;
+
+import "routes/types.proto";
+
+service RouteService {
+  rpc CreateRoute(orroutes.CreateRouteRequest) returns (orroutes.CreateRouteResponse);
+  rpc GetRoute(orroutes.GetRouteRequest) returns (orroutes.GetRouteResponse);
+}

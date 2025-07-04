@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package orroutes;
+
+import "google/protobuf/wrappers.proto";
+
+message Coordinate {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message Route {
+  string route_id = 1;
+  Coordinate start = 2;
+  Coordinate end = 3;
+  google.protobuf.Timestamp departure_time = 4;
+}
+
+message CreateRouteRequest {
+  Coordinate start = 1;
+  Coordinate end = 2;
+  google.protobuf.Timestamp departure_time = 3;
+}
+
+message CreateRouteResponse {
+  string route_id = 1; // UUID
+}
+
+message GetRouteRequest {
+  string route_id = 1; // UUID
+}
+
+message GetRouteResponse {
+  Route route = 1;
+}

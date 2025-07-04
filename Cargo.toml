@@ -1,0 +1,17 @@
+[package]
+name = "or-server"
+edition = "2024"
+
+[build-dependencies]
+tonic-build = "0.12.3"
+
+[dependencies]
+# async
+tokio = { version = "1", features = ["full"] }
+# grpc and protobuf
+tonic = "0.12.3"
+tonic-web = "0.12.3"
+prost = "0.13.3"
+prost-types = "0.13.3"
+# types
+uuid = { version = "1", features = ["v4"] }
