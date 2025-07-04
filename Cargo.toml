@@ -1,5 +1,5 @@
 [package]
-name = "or-server"
+name = "babieca"
 edition = "2024"
 
 [build-dependencies]
